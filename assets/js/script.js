@@ -47,6 +47,29 @@ var currentW = (event)=>{
 
         </ul>`;
 
+        $("#currentweather").html(currentWHTML);
+        let longitude = response.coord.lon;
+        let latitude = response.coord.lat;
+        let uvQueryURL = "api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&APPID=" + owmAPI;
+
+        uvQueryURL = "https://cors-anywhere.herokuapp.com/" + uvQueryURL;
+        fetch(uvQueryURL)
+        .then(handleErrors)
+        .then((response) => {
+            return response.json();
+        })
+        .then((response) => {
+            let uvIndex = response.value;
+            $('#uvIndex').html(`UV Index: <span id="uvVal"> ${uvIndex}</span>`);
+            if (uvIndex>=0 && uvIndex<3){
+                $('#uvVal').attr("class", "uv-favorable");
+            } else if (uvIndex>=3 && uvIndex<8){
+                $('#uvVal').attr("class", "uv-moderate");
+            } else if (uvIndex>=8){
+                $('#uvVal').attr("class", "uv-severe");
+            }
+        });
+
     })
 }
 
