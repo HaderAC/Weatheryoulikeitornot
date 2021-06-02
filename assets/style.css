@@ -1,6 +1,6 @@
 body{
     
-    background: linear-gradient(#ec8423, #070e64);
+    background: linear-gradient(#250363, #f8c578);
 }
 
 
@@ -13,13 +13,14 @@ img {
 
 .card-title {
     font-size: 30px;
+    
 }
 
 
 
 .fiveDayColor {
     padding: 20px;
-    margin: 15px;
+    margin: 25px;
     background-color: #70a4d8;
     color: white;
     border: 3px solid lightgray;
@@ -29,25 +30,25 @@ img {
 
 .banner{
 
-    
-    background: linear-gradient(90deg, rgb(141, 149, 155) 0%, rgb(61, 77, 107) 100%);
+    background: linear-gradient(90deg, rgb(226, 191, 138) 0%, rgb(4, 38, 102) 100%);
     border: none;
 }
 
 
 
 .fiveDayCard{
-    background: #5a5f69;
+    /* background: #5a5f69; */
+    background: linear-gradient(90deg, rgb(226, 191, 138) 0%, rgb(4, 38, 102) 100%);
     border: none;
 }
 
 
 .currentCard{
-    width: 50%;
+    width: 60%;
     vertical-align: middle;
-    background: #063ba8;
+    background: linear-gradient(90deg, rgb(226, 191, 138) 0%, rgb(4, 38, 102) 100%);
     display: inline-block;
-    padding-right: 50px;
+    padding-right: 60px;
     text-align: center;
     border: none;
   
@@ -55,19 +56,25 @@ img {
 
 
 .card-text{
+    color: white;
+
     
 }
 
 .card-body{
-    
+    border: none;
+    vertical-align: center;
+    /* background: #a2a4a7; */
+    background: linear-gradient(90deg, rgb(226, 191, 138) 0%, rgb(4, 38, 102) 100%);
     
 }
-
-.card-search{
-    
-}
-
 
 .data-city{
     background: #2e2f31;
 }
+
+.card-search{
+    vertical-align: center;
+}
+
+
