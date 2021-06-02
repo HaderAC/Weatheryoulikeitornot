@@ -1,76 +1,78 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-
-    <title>Weather You like it or not</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+<body>
 
-<body id="body">
-    <!-- City Name-->
-    <div id="header" class="jumbotron jumbotron-fluid text-container">
-        <h1 id="header-text" class="display-2">THIS IS WHERE THE MAIN CITY GOES</h1>
-        <div id="artist-credit"></div>
-    </div>
-
-    <!-- Main container -->
-    <div id="content" class="container">
-        <div class="row">
-
-            <!-- content on the left -->
-            <div id="content-left" class="col-md-3">
-                <form>
-                    <label for="citySearch">Search for a City:</label>
-                    <div class="form-row">
-                        <input id="citySearch" class="form-control" name="city" value="Florida"></input>
-                        <!-- magnifying glass buttn -->
-                        <button id="searchbutton" class="btn btn-primary" type="submit">SEARCH BTTN<i
-                                class="fas fa-search"></i></button>
-                    </div>
-                </form>
-                <div id="searcherror">It'll show sear error</div>
-
-                <ul id="cityresults" class="list-group mt-4">LIST OF CITIES</ul>
-
-
-                <!-- Button to clear -->
-
-                <a id="clearstorage" href="#">CLEAR BTTN</a>
+    <div class="container-fluid pt-3">
+        <div class="card border-0">
+            <div class="card-body text-center text-white">
+                <h1>Weather Dashboard</h1>
             </div>
+        </div>
 
-            <!-- Right side content showing current weather and five day forecast displays on search -->
+        <div class="container">
+            <div class="row">
+                <div class="col mt-4">
+                    <div class="card-search text-center">
           
-                <div id="contentright" class="col-md-9 pt-4">
-                   
-                    <!-- Current weather displayed on top -->
-                    <div id="currentweather" class="border rounded">CURRENT WEATHER</div>
-                    <!-- Five day forecast below the current weather -->
-                    <div id="fivedayforecast" class="mt-5">FIVE DAY FORECAST</div>
-               
+
+                        <div class="card border-0" style="width: 18rem;">
+                            <div class="card-body">
+                                <h6 class="card-subtitle border-0 mb-2 text-white">Search For A City</h6>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control searchInput" placeholder="Enter City Name">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-danger searchButton" type="button"
+                                            id="button-addon2"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card w-100">
+                                    <div class = "past-search border" id = "past-search-buttons"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-4 ">
+                    <div class="card currentCard pb-2 pt-1">
+                        <h5 class="card-title mt-2 text-center text-white">Current Forecast</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                        <div class="card pb-5 fiveDayCard pl-5 text-white">
+                            <h5 class="card-title mt-2 mr-5">5-Day Forecast </h5>
+                            <div class="row">
+                                <div class="col fiveDayOne">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d3bce829f3.js" crossorigin="anonymous"></script>
+
+
     <script src="script.js"></script>
 
-</body>
 
+    
+</body>
 </html>
