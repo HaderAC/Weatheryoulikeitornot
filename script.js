@@ -43,3 +43,14 @@ searchButton.click(function () {
 
     var urlCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
     var urlFiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
+
+
+    if (searchInput == "") {
+        alert("Please enter a city in the search box");
+    } else {
+        $.ajax({
+            url: urlCurrent,
+            method: "GET",
+            error: function(badCall){
+                alert("Please enter a valid city")
+            }
