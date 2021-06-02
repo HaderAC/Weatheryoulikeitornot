@@ -202,3 +202,24 @@ var displayWeather = function(){
 
         });
     }
+    
+    var getCityWeather = function(city){
+        var apiKey = "c7a6e4833c8f6120d2e8b2262378040e"
+       
+        var apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+    
+        fetch(apiURL)
+        .then(function(response){
+            response.json().then(function(data){
+                displayWeather(data, city);
+            });
+        });
+    };
+    
+    var pastSearchHandler = function(event){
+        var city = event.target.getAttribute("data-city")
+        if(city){
+            displayWeather(city)
+        }
+    }
+    pastSearchButtonEl.addEventListener("click", pastSearchHandler);
