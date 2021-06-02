@@ -27,17 +27,29 @@ img {
 
 }
 
-.fiveDayCard{
-   
-}
-
-
 .banner{
-  
+
+    
+    background: linear-gradient(90deg, rgb(141, 149, 155) 0%, rgb(61, 77, 107) 100%);
+    border: none;
 }
+
+
+
+.fiveDayCard{
+    background: #5a5f69;
+    border: none;
+}
+
 
 .currentCard{
-   
+    width: 50%;
+    vertical-align: middle;
+    background: #063ba8;
+    display: inline-block;
+    padding-right: 50px;
+    text-align: center;
+    border: none;
   
 }
 
