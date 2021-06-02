@@ -1,19 +1,21 @@
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-stretch: semi-expanded;
+    color: linear-gradient(90deg, rgb(226, 191, 138) 0%, rgb(4, 38, 102) 100%);
+}
+
 body{
     
     background: linear-gradient(#250363, #f8c578);
+    height: 300px;
 }
 
 
-
-img {
-    width: 100px;
-    height: 100px;
-}
 
 
 .card-title {
     font-size: 30px;
-    
+    width: 100%;
 }
 
 
